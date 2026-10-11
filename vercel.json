@@ -1,0 +1,16 @@
+{
+    "crons":  [
+                  {
+                      "path":  "/api/cron/sync",
+                      "schedule":  "0 7 * * *"
+                  },
+                  {
+                      "path":  "/api/cron/weekly-summary",
+                      "schedule":  "0 9 * * 0"
+                  },
+                  {
+                      "path":  "/api/cron/retrain",
+                      "schedule":  "30 4 * * 1"
+                  }
+              ]
+}

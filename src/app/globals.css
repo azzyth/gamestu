@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b1220;
+  --foreground: #e6ecf7;
+  --card: #121c31;
+  --border: #24304d;
+  --muted: #8fa3c0;
+  --accent: #4f8cff;
+  --success: #34c98e;
+  --warning: #f5b83d;
+  --danger: #f0616d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
