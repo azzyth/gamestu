@@ -58,10 +58,15 @@ export function PushEnableButton() {
         });
       }
       const supabase = createClient();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user) throw new Error("Not signed in");
       const { error } = await supabase
         .from("push_subscriptions")
         .upsert(
           {
+            user_id: user.id,
             endpoint: sub.endpoint,
             keys_p256dh: (sub.toJSON().keys as { p256dh: string }).p256dh,
             keys_auth: (sub.toJSON().keys as { auth: string }).auth,
