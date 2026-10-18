@@ -4,8 +4,6 @@ A personal academic assistant for students who game. It tracks game hours vs. st
 computes the game:study ratio, flags academic risk (low / moderate / high) before a bad
 grade confirms it, and alerts when the trend crosses into dangerous territory.
 
-![Dashboard](docs/dashboard.png)
-
 The planning docs live in [`docs/`](docs/) (`01-PRD.md` through
 `04-Feature-Prioritization.md`). This app implements their full phased roadmap:
 
